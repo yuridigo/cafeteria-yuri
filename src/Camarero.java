@@ -22,4 +22,13 @@ public class Camarero {
     public void setCodigoCamarero(String codigoCamarero) {
         this.codigoCamarero = codigoCamarero;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Camarero{");
+        sb.append("nombre='").append(nombre).append('\'');
+        sb.append(", codigoCamarero='").append(codigoCamarero).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }
