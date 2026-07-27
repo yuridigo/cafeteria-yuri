@@ -10,7 +10,10 @@ public class Comida extends Producto{
         this.caliente = caliente;
 
     }
-//metodo sobreescrito
+/*metodo sobreescrito
+Sobrescribo informacionProducto() para aprovechar lo que ya hace Producto (mostrar nombre, precio y categoría)
+y además añadir la información específica de Bebida (el tamaño)
+  */
     @Override
     public void informacionProducto() {
         super.informacionProducto();

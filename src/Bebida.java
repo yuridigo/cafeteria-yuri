@@ -9,7 +9,8 @@ public class Bebida extends Producto {
     private Tamanio tamanio;
     //declaro tamaño porque en mi clase producto no lo tengo
 
-
+//super(...) le digo al constructor del padre: "construye tú la parte común del objeto (nombre, precio y categoría),
+// que yo como hija añadiré mis propios atributos
     public Bebida(String  nombre, double precio, String categoria, Tamanio tamanio){
 
         super(nombre,precio,categoria);

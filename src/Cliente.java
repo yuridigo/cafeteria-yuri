@@ -1,8 +1,7 @@
 public class Cliente {
-// pendiente añadir una validacion en telefono para que pongan un numero valido
+
     // atributos privados para fuera de la clase no poder acceder por seguridad
-    //this.nombre=nombre, hace referencia al atributo de la clase
-    //el cajon de este cliente es igual al nombre que me acaban de pasar
+    //this. referencia al objeto actual. Es obligatorio cuando hay dos variables con el mismo nombre (por ejemplo, el atributo y el parámetro).
 
     /*
     pensar en una funcion como una tarea que te ponen en casa: void=espera que se haga una tarea por ejemplo limpiar la cocina y vuelves con las manos vacias
@@ -49,8 +48,6 @@ public class Cliente {
 
 // 1. Comprobamos la longitud
         if (telefono.length() == 9) {
-            System.out.println("El teléfono tiene 9 dígitos.");
-
 
             // 2. Comprobamos que todos los caracteres sean números
             boolean soloNumeros = true;
@@ -62,7 +59,6 @@ public class Cliente {
             }
 
             if (soloNumeros) {
-                System.out.println("Número válido.");
 
         /*Cuando un atributo necesita validación,
         es buena práctica hacerla en el setter. Si el constructor también recibe ese atributo,
@@ -87,13 +83,19 @@ public class Cliente {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Cliente{");
-        sb.append("nombre='").append(nombre).append('\'');
-        sb.append(", telefono='").append(telefono).append('\'');
-        sb.append(", correo='").append(correo).append('\'');
-        sb.append('}');
+        final StringBuilder sb = new StringBuilder("----- Cliente -----").append("\n");
+        sb.append("Nombre:").append(nombre).append('\n');
+        sb.append("Telefono:").append(telefono).append('\n');
+
+// mejor que null que salga un mensaje cuando no se ha proporcionado correo
+        if (correo !=null) {
+            sb.append("Correo:").append(correo).append('\n');
+        }else{
+        sb.append("Correo:no disponible ").append("\n"); }
+
         return sb.toString();
     }
+
 }
 
 

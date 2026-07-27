@@ -25,10 +25,9 @@ public class Camarero {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Camarero{");
-        sb.append("nombre='").append(nombre).append('\'');
-        sb.append(", codigoCamarero='").append(codigoCamarero).append('\'');
-        sb.append('}');
+        final StringBuilder sb = new StringBuilder("-----Responsable venta-----").append("\n");
+        sb.append("Nombre:").append(nombre).append('\n');
+        sb.append("Código del camarero:").append(codigoCamarero).append('\n');
         return sb.toString();
     }
 }
