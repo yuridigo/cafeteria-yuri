@@ -65,7 +65,7 @@ public class Producto {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("-----Producto -----").append("\n");
-        sb.append("Precio:").append(precio);
+        sb.append("Precio:").append(precio).append("\n");
         sb.append("Categoria:").append(categoria).append('\n');
         sb.append("Nombre:").append(nombre).append('\n');
 
