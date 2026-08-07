@@ -1,5 +1,5 @@
 public class Producto {
-    // los atributos protected van a poder ser vistos por la clase padre y las clases hijas
+    // Las clases hijas pueden acceder a los atributos protected de su clase padre
 
     protected String nombre;
     protected double precio;
@@ -51,11 +51,12 @@ public class Producto {
 
     public void setPrecio(double precio) {
 
-        if (precio <=0){
+        // El setter debe tener la asignación solo cuando el dato sea válido. Si el precio no es válido, muestro el mensaje y no cambio el atributo.
+        if (precio > 0) {
+            this.precio = precio;
+        } else {
             System.out.println("Error, importe no válido");
         }
-        // El setter debe tener la asignación solo cuando el dato sea válido. Si el precio no es válido, muestro el mensaje y no cambio el atributo.
-        this.precio = precio;
     }
 
     public void setCategoria(String categoria) {
@@ -65,9 +66,11 @@ public class Producto {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("-----Producto -----").append("\n");
-        sb.append("Precio:").append(precio).append("\n");
-        sb.append("Categoria:").append(categoria).append('\n');
         sb.append("Nombre:").append(nombre).append('\n');
+        sb.append("Categoria:").append(categoria).append('\n');
+        sb.append("Precio:").append(precio).append("\n");
+
+
 
         return sb.toString();
     }

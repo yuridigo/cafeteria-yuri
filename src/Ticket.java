@@ -39,14 +39,16 @@ public class Ticket {
 
     /*truco para saber si necesito parametros: ¿El Ticket necesita que alguien le pase un precio?
     La respuesta es:No. Porque el Ticket ya tiene guardados los productos.
-   Y cada producto ya sabe cuál es su precio.Así que el Ticket puede hacer el trabajo él solo.
+   Y cada producto ya sabe cuál es su precio. Así que el Ticket puede hacer el trabajo él solo.
+    System.out.println("Importe: "+totalPrecioProductos + "€"); esta parte la quito de esta función para evitar que al
+    imprimir me salga 2 veces el precio
     */
 public void calcularTotal() {
     totalPrecioProductos=0;
     for (int i = 0; i < contadorProductos; i++) {
         totalPrecioProductos += productos[i].getPrecio() ;
 
-    } System.out.println("Importe: "+totalPrecioProductos + "€");
+    }
 
 }
 
@@ -62,7 +64,7 @@ public void calcularTotal() {
         }
         calcularTotal();
         System.out.println("tienes "+contadorProductos+" productos en tu compra");
-        System.out.println("el precio total de los productos es "+totalPrecioProductos);
+        System.out.println("el precio total de los productos es "+totalPrecioProductos+"€");
 
 
 
