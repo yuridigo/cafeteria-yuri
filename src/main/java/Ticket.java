@@ -1,3 +1,6 @@
+/**
+ * Representa un ticket de compra de la cafetería.
+ */
 public class Ticket {
     /*
   En esta clase he incluido:Constante para el nombre de la cafeteria
@@ -20,6 +23,13 @@ public class Ticket {
 /*publico para llamarlo desde las otras clases, void porque no devuelve nada, agregar producto el nombre del metodo
     public void agregarProducto(Producto producto)
 */
+    /**
+     * Crea un ticket asociado a un cliente y un camarero.
+     * Inicializa la lista de productos y el total del ticket.
+     *
+     * @param cliente cliente asociado al ticket
+     * @param camarero camarero responsable de la venta
+     */
 
     public Ticket(Cliente cliente, Camarero camarero){
         this.cliente = cliente;
@@ -31,7 +41,11 @@ public class Ticket {
         this.totalPrecioProductos=0;
 
     }
-
+    /**
+     * Añade un producto al ticket.
+     *
+     * @param producto producto que se añade al ticket
+     */
     public void agregarProducto(Producto producto){
         productos[contadorProductos] = producto;
         contadorProductos = contadorProductos + 1;
@@ -43,6 +57,9 @@ public class Ticket {
     System.out.println("Importe: "+totalPrecioProductos + "€"); esta parte la quito de esta función para evitar que al
     imprimir me salga 2 veces el precio
     */
+    /**
+     * Calcula el precio total de los productos incluidos en el ticket.
+     */
 public void calcularTotal() {
     totalPrecioProductos=0;
     for (int i = 0; i < contadorProductos; i++) {
@@ -51,9 +68,25 @@ public void calcularTotal() {
     }
 
 }
+//este get está añadido previamente para la clase de test del ticket
+    //mantengo mi atributo privado pero así puedo consultar el valor desde fuera
+
+    /**
+     * Devuelve el precio total de los productos del ticket.
+     *
+     * @return precio total de los productos
+     */
+    public double getTotalPrecioProductos() {
+        return totalPrecioProductos;
+    }
 
 // esta funcion solo debería imprimir
 //dentro de un metodo puedo llamar a otra función; en mi caso si ejecuto el código sin llamar a calcular total,me va a dar 0 al ejecutar.
+
+    /**
+     * Muestra por pantalla la información del ticket,
+     * incluyendo el cliente, el camarero, los productos y el precio total.
+     */
     public void mostrarTicket(){
         System.out.println(NOMBRE_CAFETERIA);
         System.out.println(cliente);

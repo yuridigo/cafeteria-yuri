@@ -1,5 +1,9 @@
 import java.util.Scanner;
-
+/**
+ * Clase principal que ejecuta el programa de la cafetería.
+ * @author Yuri Diaz
+ * @version 0.0.1
+ */
 public class Main {
     public static void main(String[] args) {
 

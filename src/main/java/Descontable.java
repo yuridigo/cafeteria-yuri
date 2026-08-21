@@ -8,8 +8,15 @@ Las interfaces también sirven para decir:
 Un atributo guarda información que pertenece al objeto durante toda su vida.
 Un parámetro es un dato que un método necesita solo cuando se ejecuta.
  */
-
+/**
+ * Define el comportamiento para aplicar un descuento.
+ */
 public interface Descontable {
-
+    /**
+     * Aplica un descuento sobre el precio.
+     *
+     * @param porcentaje porcentaje de descuento que se aplica
+     * @return precio después de aplicar el descuento
+     */
     public double aplicarDescuento(double porcentaje);
 }

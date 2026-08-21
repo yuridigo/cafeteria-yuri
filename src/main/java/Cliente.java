@@ -1,3 +1,6 @@
+/**
+ * clase que representa a un cliente de la cafetería.
+ */
 public class Cliente {
 
     // atributos privados para fuera de la clase no poder acceder por seguridad
@@ -15,23 +18,53 @@ public class Cliente {
     private String correo;
 
 // este es mi constructor con los atributos de nombre y telefono, debe ser publico, sino nadie va a poder usarlo
+    /**
+     * Crea un cliente con nombre y teléfono.
+     *
+     * @param nombre nombre del cliente
+     * @param telefono teléfono del cliente
+     */
+
     public Cliente(String nombre, String telefono) {
         this.nombre = nombre;
         setTelefono(telefono);
     }
 // la funcion get devuelve el atributo nombre de este cliente
+    /**
+     * Devuelve el nombre del cliente.
+     *
+     * @return nombre del cliente
+     */
     public String getNombre() {
         return this.nombre;
     }
 
+    /**
+     * Devuelve el teléfono del cliente.
+     *
+     * @return teléfono del cliente
+     */
+
     public String getTelefono() {
         return this.telefono;
     }
-
+/**
+ * Devuelve el correo electrónico del cliente.
+ *
+ * @return correo electrónico del cliente
+ */
     public String getCorreo() {
         return this.correo;
     }
 // este constructor recibe nombre, telefono y correo
+    /**
+     * Crea un cliente con nombre, teléfono y correo electrónico.
+     *
+     * @param nombre nombre del cliente
+     * @param telefono teléfono del cliente
+     * @param correo correo electrónico del cliente
+     */
+
     public Cliente(String nombre, String telefono, String correo){
         this.nombre = nombre;
         this.correo = correo;
@@ -39,11 +72,20 @@ public class Cliente {
 
 
     }
-
+    /**
+     * Modifica el nombre del cliente.
+     *
+     * @param nombre nuevo nombre del cliente
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    /**
+     * Modifica el teléfono del cliente.
+     * El teléfono debe contener exactamente 9 dígitos.
+     *
+     * @param telefono nuevo teléfono del cliente
+     */
     public void setTelefono(String telefono) {
 
 // 1. Comprobamos la longitud
@@ -76,11 +118,19 @@ public class Cliente {
 
 
     }
-
+    /**
+     * Modifica el correo electrónico del cliente.
+     *
+     * @param correo nuevo correo electrónico del cliente
+     */
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-
+    /**
+     * Devuelve una representación textual de los datos del cliente.
+     *
+     * @return datos del cliente en formato de texto
+     */
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("----- Cliente -----").append("\n");
